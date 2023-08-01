@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="CZ-cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail</title>
+
+    <link rel="stylesheet" href="/KurzFinalApp/styles/styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+</head>
+<body>
+    <div class="detailMain">
+        <div class="detailItems">
+            <div class="detailPicture">
+                <img src="{{ dog.image.url }}" class="" alt="">
+            </div>
+            <div class="">
+                <div class="">
+                    <h5 class="detailHeader">{{ dog.title }}</h5>
+                    <p class="detailDescription">{{ dog.description }}</p>
+                <div class="detailLinkStyl">
+                    <p class="detailLink">
+                        {% if dog.url %}
+                        Více informací <a href="{{ dog.url }}" id="style-2" data-replace="o plemeni!"><span>o plemeni!</span></a>
+                        {% endif %}
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="galerieVezmiMe">
+        <p>
+            <a href="{% url 'galerie' %}">Zpět do galerie!</a>
+        </p>
+    </div>
+
+</body>
+</html>

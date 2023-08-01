@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="CZ-CS">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galerie</title>
+    <link rel="stylesheet" href="/KurzFinalApp/styles/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+
+<body>
+<div class="galerieAll">
+    <div class="gridcontainer">
+
+        <div class="hlavicka">
+            <div class="containerhlavicky">
+                <div><a href="https://cs.wikipedia.org/wiki/Welsh_Corgi_Pembroke"><img src="/images/icons8-corgi-100 (1).png" alt="can"></a></div>
+
+                <nav class="vyber_1">
+                    <ul>
+                        <li><a href="{% url 'home' %}">Domů</a></li> <!--Zde doplním, vyskakovací okno, jste na homepage-->
+                        <!-- <li><a href="/templates/psiHra.html">Psí Hra</a></li> -->
+                        <li><a href="{% url 'kontakty' %}">Kontakty</a></li>
+                        <li><a href="{% url 'galerie' %}">Galerie</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="galerieSubmit">
+            <form class="formGalerie" action="">
+                <div>
+                    <label>Vyhledej obrázky dle plemene:</label>
+                    <input type="text" name="searchPicture" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-primary hledejGalerie">
+                    Hledej!
+                </button>
+            </form>
+            <p class="galerieCozrovna">Co se zrovna hledá? {{ searchPicture }}</p>
+        </div>
+
+    <div class="containerGalerie">
+        <div class="galerieMain">
+                {% for picture in pictures %}
+                <div v-for="picture in pictures" class="galerieFinder">
+                    <div class="pictureFind">
+                        <img class="card-img-top" src="{{ picture.image.url }}" />
+                        <div class="card-body">
+                            <a href="{% url 'detail' picture.id %}">
+                            <h5 class="card-title fw-bold">{{ picture.title }}</h5>
+                        </a>
+                            <!-- <p class="card-text">{{ picture.description }}</p> -->
+                            <!-- POZOR DO ŘÁDKU NAD SE MUSÍ JEŠTĚ DOPLNIT HREF A MĚLO BY TO FUNGOVAT  -->
+                            {% if picture.url %} 
+                            <!-- POKUD JSOU ZÁVORKY jako např. u movieDescription na radku výše TAK TO ZNAMENÁ, ŽE SE JEDNÁ O PROMĚNNOU -->
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+        </div>
+        <!-- new code ends -->
+        <br />
+        <br />
+        
+    </div>
+    <div class="galerieVezmiMe">
+        <p>
+            <a href="{% url 'home' %}">Vezmi mě domů!</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>

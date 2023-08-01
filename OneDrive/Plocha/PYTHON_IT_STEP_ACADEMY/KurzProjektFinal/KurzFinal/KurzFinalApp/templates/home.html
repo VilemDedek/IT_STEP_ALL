@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="CZ-cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <link rel="stylesheet" href="/KurzFinalApp/styles/styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <style>
+        .nalezeno {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="gridcontainer site">
+
+        <div class="hlavicka">
+            <div class="containerhlavicky">
+                <div><a href="https://cs.wikipedia.org/wiki/Welsh_Corgi_Pembroke"><img src="/images/icons8-corgi-100 (1).png" alt="can"></a></div>
+
+                <nav class="vyber_1">
+                    <ul>
+                        <li><a href="{% url 'home' %}">Domů</a></li>
+                        <li><a href="{% url 'kontakty' %}">Kontakty</a></li>
+                        <li><a href="{% url 'galerie' %}">Galerie</a></li>
+                    </ul>
+                </nav>
+
+                <div class="hledej form">
+                    <p class="homeZvyraznovac">Zvýrazňovač odstavců</p>
+					<form class="homeForm" method="POST" actions="/" id="list-users">
+						<label>
+							<input type="text" class="js-whatHide" name="hide" value="" placeholder="Co chceš najít?">
+						</label>
+					</form>
+				</div>
+            </div>
+        </div>
+
+        <div class="stat js-searchIn style-kosticky">
+        
+            <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam erat volutpat. Integer rutrum, orci vestibulum
+                ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Aliquam in lorem sit
+                amet leo accumsan lacinia. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Integer tempor. Sed vel
+                lectus. Donec odio tempus molestie, porttitor ut, PLEMENO iaculis quis, sem. Pellentesque pretium lectus id turpis. Duis
+                bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Maecenas
+                aliquet accumsan leo. Vestibulum fermentum tortor id mi. Fusce consectetuer risus a nunc. Integer in sapien.
+                Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Fusce tellus.</p>
+        
+            <p class="textobrazek">Etiam egestas wisi a erat. Duis condimentum augue id magna semper rutrum. Etiam neque. Pellentesque ipsum.
+                Curabitur vitae diam non enim vestibulum interdum. <img src="/images/icons8-corgi-100.png" alt="corgi2">quis diam. Ut enim ad minima veniam, quis nostrum
+                exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Morbi imperdiet,
+                mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Aenean id metus id velit
+                ullamcorper pulvinar. Suspendisse nisl. Nullam justo enim, consectetuer nec, ullamcorper ac, vestibulum in,
+                elit. Proin in tellus sit amet nibh dignissim sagittis. Etiam egestas wisi a erat. Etiam quis quam. Mauris
+                metus.</p>
+        
+            <p>Curabitur sagittis hendrerit ante. Etiam dictum tincidunt diam. Class aptent taciti sociosqu ad litora torquent
+                per conubia nostra, per inceptos hymenaeos. Integer vulputate sem a nibh rutrum consequat. Etiam quis quam.
+                Nulla est. Etiam commodo dui eget wisi. In rutrum. Class aptent taciti ZUBY sociosqu ad litora torquent per conubia
+                nostra, per inceptos hymenaeos. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                mus. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Fusce wisi. Nullam at arcu a
+                est sollicitudin euismod. Fusce wisi. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Morbi
+                scelerisque luctus velit. Phasellus faucibus molestie nisl. In rutrum. Duis sapien nunc, commodo et, interdum
+                suscipit, sollicitudin et, dolor.</p>
+        
+        </div>
+
+        <div class="banner_1 js-searchIn style-kosticky">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer lacinia. Duis pulvinar. Phasellus enim
+                erat, vestibulum vel, aliquam a, posuere eu, velit. Aenean vel massa quis mauris vehicula lacinia.
+                Suspendisse nisl. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                voluptatem. Suspendisse sagittis ultrices augue. Sed vel lectus. Donec odio tempus molestie, porttitor
+                ut, iaculis quis, sem. Fusce tellus. Nam libero tempore, cum soluta nobis est eligendi optio cumque
+                nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis
+                dolor repellendus. Duis condimentum augue id magna semper rutrum. Morbi leo mi, nonummy eget tristique
+                non, rhoncus non leo.
+            </p>
+        </div>
+        
+        <div class="banner_2 js-searchIn style-kosticky">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer lacinia. Duis pulvinar. Phasellus enim
+                erat, vestibulum vel, aliquam a, posuere eu, velit. Aenean vel massa quis mauris vehicula lacinia.
+                Suspendisse nisl. Neque porro PLEMENO quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                voluptatem. Suspendisse sagittis ultrices augue. Sed vel lectus. Donec odio tempus molestie, porttitor
+                ut, iaculis quis, sem. Fusce tellus. Nam libero tempore, cum soluta nobis est eligendi optio cumque
+                nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis
+                dolor repellendus. Duis condimentum augue id magna semper rutrum. Morbi leo mi, nonummy eget tristique
+                non, rhoncus non leo.
+            </p>
+        </div>
+
+    </div>
+
+    <script type='text/javascript' src='/KurzFinalApp/js/functions.js'></script>
+</body>
+
+</html>

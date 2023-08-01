@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="CZ-CS">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email confirmation</title>
+    <link rel="stylesheet" href="/KurzFinalApp/styles/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+
+<body>
+    <div class="gridcontainer">
+
+        <div class="hlavicka">
+            <div class="containerhlavicky">
+                <div><a href="https://cs.wikipedia.org/wiki/Welsh_Corgi_Pembroke"><img src="/images/icons8-corgi-100 (1).png" alt="can"></a></div>
+
+                <nav class="vyber_1">
+                    <ul>
+                        <li><a href="/KurzFinalApp/templates/home.html">Domů</a></li> <!--Zde doplním, vyskakovací okno, jste na homepage-->
+                        <!-- <li><a href="/templates/psiHra.html">Psí Hra</a></li> -->
+                        <li><a href="{% url 'kontakty' %}">Kontakty</a></li>
+                        <li><a href="{% url 'galerie' %}">Galerie</a></li>
+                    </ul>
+                </nav>
+                
+            </div>
+        </div>
+    </div>
+
+        <div class="emailMain">
+            <span>Váš e-mail: </span><span class="emailDetail" href="mailto:info@example.com">{{ email }}</span><span> byl přidán na náš mailing list!</span>
+        </div>
+
+        <div class="galerieVezmiMe">
+            <p>
+                <a href="{% url 'home' %}">Vezmi mě domů!</a>
+            </p>
+        </div>
+        
+</body>
+</html>

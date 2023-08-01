@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="CZ-cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kontakty</title>
+
+    <link rel="stylesheet" href="/KurzFinalApp/styles/styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+</head>
+
+<body>
+
+    <div class="gridcontainer">
+
+        <div class="hlavicka">
+            <div class="containerhlavicky">
+                <div><a href="https://cs.wikipedia.org/wiki/Welsh_Corgi_Pembroke"><img
+                            src="/images/icons8-corgi-100 (1).png" alt="can"></a></div>
+
+                <nav class="vyber_1">
+                    <ul>
+                        <li><a href="{% url 'home' %}">Domů</a></li>
+                        <!--Zde doplním, vyskakovací okno, jste na homepage-->
+                        <!-- <li><a href="/templates/psiHra.html">Psí Hra</a></li> -->
+                        <li><a href="{% url 'kontakty' %}">Kontakty</a></li>
+                        <li><a href="{% url 'galerie' %}">Galerie</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    <div class="kontaktyStat">
+        <div class="contact-us">
+            <form action="#">
+                <label for="customerName" class="kontaktyName">Jméno <em>&#x2a;</em></label><input id="customerName" name="customerName"
+                    required="" type="text" placeholder="Např.Jan Novák"/><label for="customerEmail" class="kontaktyEmail">E-mail <em>&#x2a;</em></label><input
+                    id="customerEmail" name="customerEmail" required="" type="email" placeholder="Např.jan.novak@email.com"/><label
+                    for="customerPhone" class="kontakyTelefon">Telefonní číslo </label><input id="customerPhone" name="customerPhone"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" placeholder="Např.+420777111222"/><label
+                    for="customerNote" class="kontaktyMessage">Vaše zpráva <em>&#x2a;</em></label><textarea id="customerNote"
+                    name="customerNote" required="" rows="10" cols="50" placeholder="Zde je místo pro vaši zprávu ..."></textarea>
+                <h3 class="kontaktyText">
+                    Napište nám prosím co nejdetailněji, jaký je váš problém.
+                </h3>
+                <label for="spamProtection" class="kontaktyRobot">Nejseš robot?<em>&#x2a; </em><span>&nbsp;&nbsp;&nbsp;&nbsp;Pokud nejsi, napiš NEJSEM!</span></label><input id="spamProtection" class="spamProtection" name="spamProtection"
+                type="text" placeholder="JSEM nebo NEJSEM?!"/>
+                
+                <button id="customerOrder">Odeslat</button>
+            </form>
+        </div>
+
+
+    <div class="kontaktyNews">
+        <h2>Join our mailing list:</h2>
+        <form action="{% url 'signup' %}">
+            <div class="kontaktyNewsEmail">
+                <label for="email" class="form-label">
+                    Zde vložte váš e-mail a přihlaste se k odběru novinek:
+                </label>
+                <input type="email" class="form-control" name="email" placeholder="Např. info@mail.com" />
+            </div>
+            <button type="submit">
+                Přihlásit odběr!
+            </button>
+
+        </form>
+    </div>
+</div>
+
+</body>
+
+</html>
